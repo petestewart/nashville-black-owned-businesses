@@ -7,6 +7,7 @@ After seeing a lot of graphics and lists with black-owned businesses in Nashvill
 Initially this is focused on restaraunts that deliver and/or offer carry-out, but it could certianly be expanded to much more.
 
 ## Backlog
+- [x] Enter businesses info into data array
 - [ ] Create buttons to filter by neighborhood and/or food type
 - [ ] Display links to yelp or other resource for each business
 - [ ] Add direct delivery order links where possible
