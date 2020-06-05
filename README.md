@@ -11,3 +11,9 @@ Initially this is focused on restaraunts that deliver and/or offer carry-out, bu
 - [ ] Display links to yelp or other resource for each business
 - [ ] Add direct delivery order links where possible
 - [ ] Add image URL's for each business
+
+## Contributors
+* [Pete Stewart](https://github.com/petestewart72)
+
+## Technologies Used
+[![Vanilla JavaScript](https://img.shields.io/badge/JavaScript-2c9fcc?style=flat-square)](#) [![HTML](https://img.shields.io/badge/-HTML-2c9fcc?style=flat-square)](#) [![CSS](https://img.shields.io/badge/-CSS-2c9fcc?style=flat-square)](#)
