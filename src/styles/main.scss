@@ -1,1 +1,105 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+  font-size: 22px;
+  // font-size: 14px;
+  line-height: 1.28571em;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.banner {
+  background-color: blue;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px;
+  margin: 0;
+}
+
+.header, #myHeader {
+  background: #555;
+  color: #f1f1f1;
+}
+
+#myHeader {
+  padding: 10px 16px;
+}
+
+#results {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #content {
+  padding-top: 102px;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.biz {
+  margin: 10px;
+  padding: 10px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.neighborhood {
+  font-style: italic;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#filterButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-weight: bold;
+  margin-top: 10px;;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filter-group {
+  margin-top: 20px;
+}
