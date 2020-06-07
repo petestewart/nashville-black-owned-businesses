@@ -3,12 +3,14 @@ const businesses = [
     name: "Bolton's Spicy Fish & Chicken",
     address: '624 Main St',
     zip: 37204,
+    neighborhood: 'East Nashville',
     veg: false,
     url: 'https://www.yelp.com/biz/boltons-spicy-chicken-and-fish-nashville?osq=Bolton%27s+Spicy+Fish+%26+Chicken',
   },
   {
     name: 'Bones, Fish & More',
     address: '2597 Murfreesboro Pike',
+    neighborhood: 'Antioch',
     zip: 37217,
     veg: false,
     url: 'https://www.yelp.com/biz/bones-fish-and-more-nashville',
@@ -16,6 +18,7 @@ const businesses = [
   {
     name: "Brother Z's Wangs",
     address: '1407 Dickerson Pike',
+    neighborhood: 'East Nashville',
     zip: 37207,
     veg: false,
     url: 'https://www.yelp.com/biz/brother-zs-wangs-nashville-3',
@@ -23,6 +26,7 @@ const businesses = [
   {
     name: 'Ghot Wingz',
     address: '2617 Gallatin Pike',
+    neighborhood: 'East Nashville',
     zip: 37216,
     veg: false,
     url: 'https://www.yelp.com/biz/ghot-wingz-nashville-2',
@@ -30,6 +34,7 @@ const businesses = [
   {
     name: 'Harolds Chicken Nashville',
     address: '811 Dickerson Pike Ste B',
+    neighborhood: 'East Nashville',
     zip: 37207,
     veg: false,
     url: 'https://www.yelp.com/biz/harolds-chicken-nashville-nashville',
@@ -37,6 +42,7 @@ const businesses = [
   {
     name: 'Pluckerz Wing Bar',
     address: '1602 21st Ave',
+    neighborhood: 'Music Row',
     zip: 37212,
     veg: false,
     url: 'https://www.yelp.com/biz/pluckerz-wing-bar-nashville-2',
@@ -44,6 +50,7 @@ const businesses = [
   {
     name: "Prince's Hot Chicken Shack",
     address: '423 6th Ave S',
+    neighborhood: 'Wedgewood',
     zip: 37203,
     veg: false,
     url: 'https://www.yelp.com/biz/princes-hot-chicken-shack-nashville-4',
@@ -51,6 +58,7 @@ const businesses = [
   {
     name: "Rocky's Wing Shack",
     address: '1601 9th Ave N',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: false,
     url: 'https://www.yelp.com/biz/rockys-wing-shack-nashville',
@@ -58,6 +66,7 @@ const businesses = [
   {
     name: 'Slow Burn Hot Chicken',
     address: '495B Myatt Dr Ste B',
+    neighborhood: 'Madison',
     zip: 37115,
     veg: false,
     url: 'https://www.yelp.com/biz/slow-burn-hot-chicken-madison-2',
@@ -65,6 +74,7 @@ const businesses = [
   {
     name: 'Slow Burn Hot Chicken',
     address: '726 McFerrin Ave',
+    neighborhood: 'East Nashville',
     zip: 37206,
     veg: false,
     url: 'https://www.yelp.com/biz/slow-burn-hot-chicken-nashville-4',
@@ -72,6 +82,7 @@ const businesses = [
   {
     name: 'Strikeout Wingz',
     address: '2521 Nolensville Pike',
+    neighborhood: 'South Nashville',
     zip: 37211,
     veg: false,
     url: 'https://www.yelp.com/biz/strikeout-wingz-nashville',
@@ -79,6 +90,7 @@ const businesses = [
   {
     name: 'The Southern V',
     address: '1200 Buchanan St',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/the-southern-v-nashville',
@@ -86,6 +98,7 @@ const businesses = [
   {
     name: 'Radical Rabbit @ 12 South Farmers Market',
     address: '3000 Granny White Pike',
+    neighborhood: '12 South',
     zip: 37212,
     veg: true,
     url: 'https://radrab.com/',
@@ -93,6 +106,7 @@ const businesses = [
   {
     name: 'Radical Rabbit @ Richland Park Farmers Market',
     address: '4711 Charlotte Ave',
+    neighborhood: 'Sylvan Park',
     zip: 37209,
     veg: true,
     url: 'https://radrab.com/',
@@ -100,6 +114,7 @@ const businesses = [
   {
     name: "Amy's Ethiopian Restaurant",
     address: '2510 Murfreesboro Rd Ste 10',
+    neighborhood: 'Nashboro Village',
     zip: 37217,
     veg: true,
     url: 'https://www.yelp.com/biz/amys-ethiopian-restaurant-nashville',
@@ -107,6 +122,7 @@ const businesses = [
   {
     name: 'Vege-licious',
     address: '513B Fisk St',
+    neighborhood: 'Wedgewood',
     zip: 37203,
     veg: true,
     url: 'https://www.yelp.com/biz/vege-licious-nashville',
@@ -114,6 +130,7 @@ const businesses = [
   {
     name: "Riddim N' Spice",
     address: '2116 Meharry Blvd',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/riddim-n-spice-nashville',
@@ -121,6 +138,7 @@ const businesses = [
   {
     name: 'Veggie Village',
     address: '1314 6th Ave N',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/veggie-village-nashville',
@@ -129,6 +147,7 @@ const businesses = [
     name: 'Jamaicaway Restaurant & Catering',
     address: '900 Rosa L Parks Blvd Ste 120',
     zip: 37208,
+    neighborhood: 'Germantown',
     veg: true,
     url: 'https://www.yelp.com/biz/jamaicaway-restaurant-and-catering-nashville-2',
   },
@@ -136,12 +155,14 @@ const businesses = [
     name: 'Jamaicaway Restaurant at Midtown',
     address: '1812 Hayes St',
     zip: 37208,
+    neighborhood: 'Germantown',
     veg: true,
     url: 'https://www.yelp.com/biz/jamaicaway-restaurant-and-catering-nashville-3',
   },
   {
     name: "Slim & Husky's Pizza Beeria",
     address: '911 Buchanan St',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/slim-and-huskys-pizza-beeria-nashville',
@@ -149,6 +170,7 @@ const businesses = [
   {
     name: 'Gojo Ethiopian',
     address: '415 W Thompson Ln',
+    neighborhood: 'South Nashville',
     zip: 37211,
     veg: false,
     url: 'https://www.yelp.com/biz/gojo-ethiopian-nashville-2',
@@ -156,6 +178,7 @@ const businesses = [
   {
     name: 'The Cupcake Collection',
     address: '1213 6th Ave N',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/the-cupcake-collection-nashville',
@@ -163,6 +186,7 @@ const businesses = [
   {
     name: 'HiFi Cookies',
     address: '733 Porter Rd',
+    neighborhood: 'East Nashville',
     zip: 37206,
     veg: true,
     url: 'https://www.hificookies.com/',
@@ -170,6 +194,7 @@ const businesses = [
   {
     name: 'The Peach Cobbler Factory',
     address: '5814 Nolensville Pike',
+    neighborhood: 'South Nashville',
     zip: 37211,
     veg: true,
     url: 'https://www.yelp.com/biz/the-peach-cobbler-factory-nashville',
@@ -178,12 +203,14 @@ const businesses = [
     name: 'Shugga Hi Bakery and Cafe',
     address: '1000 Dickerson Pike',
     zip: 37207,
+    neighborhood: 'North Nashville',
     veg: true,
     url: 'https://www.yelp.com/biz/shugga-hi-bakery-and-cafe-nashville?osq=Shugga+Hi+Bakery+and+Cafe',
   },
   {
     name: 'Kernels Gourmet Popcorn',
     address: '2501B Gallatin Ave',
+    neighborhood: 'East Nashville',
     zip: 37206,
     veg: true,
     url: 'https://www.yelp.com/biz/kernels-gourmet-popcorn-nashville-2',
@@ -191,20 +218,23 @@ const businesses = [
   {
     name: 'The Cake Project',
     address: '1006 Fatherland St Ste 207',
+    neighborhood: 'East Nashville',
     zip: 37206,
     veg: true,
     url: 'https://www.yelp.com/biz/the-cake-project-nashville-3',
   },
   {
     name: 'Sugarlips Bakery',
-    address: '',
-    zip: 0,
+    address: '(mobile service)',
+    neighborhood: 'Antioch',
+    zip: 37013,
     veg: true,
     url: 'https://www.yelp.com/biz/sugarlips-bakery-nashville-2',
   },
   {
     name: 'Fat Boys Bbq',
     address: '2733 Murfreesboro Pike',
+    neighborhood: 'Antioch',
     zip: 37013,
     veg: false,
     url: 'https://www.yelp.com/biz/fat-boys-bbq-antioch?osq=Fat+Boys+BBQ',
@@ -212,6 +242,7 @@ const businesses = [
   {
     name: 'Ooh Wee Bar-B-Q',
     address: '2008 Jefferson St',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: false,
     url: 'https://www.yelp.com/biz/ooh-wee-bar-b-q-nashville',
@@ -219,6 +250,7 @@ const businesses = [
   {
     name: 'SmoQe Signals BBQ',
     address: '3208B Gallatin Pike',
+    neighborhood: 'East Nashville',
     zip: 37216,
     veg: false,
     url: 'https://www.yelp.com/biz/smoqe-signals-bbq-nashville-3',
@@ -226,6 +258,7 @@ const businesses = [
   {
     name: "Tj's Bbq & Fish",
     address: '1104 Ed Temple Blvd',
+    neighborhood: 'Sylvan Park',
     zip: 37209,
     veg: false,
     url: 'https://www.yelp.com/biz/tjs-bbq-and-fish-nashville',
@@ -234,12 +267,14 @@ const businesses = [
     name: 'Whites Fish Hot Chicken & Bar-B-Que',
     address: '3801 Dickerson Pike',
     zip: 37207,
+    neighborhood: 'North Nashville',
     veg: false,
     url: 'https://www.yelp.com/biz/whites-fish-hot-chicken-and-bar-b-que-nashville',
   },
   {
     name: "Cal's Country Kitchen",
     address: '222 Woodruff St',
+    neighborhood: 'Madison',
     zip: 37115,
     veg: false,
     url: 'https://www.yelp.com/biz/cals-country-kitchen-madison',
@@ -247,6 +282,7 @@ const businesses = [
   {
     name: "Barr's Music City Soul Food",
     address: '618 Brentwood E Dr',
+    neighborhood: 'South Nashville',
     zip: 37211,
     veg: false,
     url: 'https://www.yelp.com/biz/barrs-music-city-soul-food-nashville',
@@ -255,12 +291,14 @@ const businesses = [
     name: "Dandgure's Classic Southern Cooking",
     address: '538 Lafayette St',
     zip: 37203,
+    neighborhood: 'Wedgewood',
     veg: false,
     url: 'https://www.yelp.com/biz/dandgures-classic-southern-cooking-nashville',
   },
   {
     name: "Doll's Family Cafe",
     address: '2501 Gallatin Ave Ste C',
+    neighborhood: 'East Nashville',
     zip: 37206,
     veg: false,
     url: 'https://www.yelp.com/biz/dolls-family-cafe-nashville-3',
@@ -268,6 +306,7 @@ const businesses = [
   {
     name: "H & T's Homecooking",
     address: '2264 Murfreesboro Pike',
+    neighborhood: 'Nashboro Village',
     zip: 37217,
     veg: false,
     url: 'https://www.yelp.com/biz/h-and-ts-homecooking-nashville',
@@ -275,6 +314,7 @@ const businesses = [
   {
     name: 'The LoCal Distro',
     address: '614 Garfield St',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: true,
     url: 'https://www.yelp.com/biz/the-local-distro-nashville',
@@ -282,11 +322,17 @@ const businesses = [
   {
     name: 'Kingdom Café & Grill',
     address: '2610 Jefferson St',
+    neighborhood: 'Germantown',
     zip: 37208,
     veg: false,
     url: 'https://www.yelp.com/biz/kingdom-caf%C3%A9-and-grill-nashville',
   },
 ];
+
+
+// const filters = [
+
+// ]
 
 const getBusinesses = () => businesses;
 

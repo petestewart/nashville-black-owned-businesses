@@ -30,11 +30,12 @@ const displayAll = () => {
       <div class = "name">${business.name}</div>
       <div class = "address">${business.address}</div>
       <div class = "zip">${business.zip}</div>
+      <div class = "neighborhood">${business.neighborhood}</div>
       <div class = "link"><a href = "${business.url}" target="_blank">link</a></div>
     </div>
     `;
   }
-  utils.printToDom('#app', domString);
+  utils.printToDom('#results', domString);
 };
 
 export default { displayAll };

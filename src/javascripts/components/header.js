@@ -1,8 +1,10 @@
+import utils from '../helpers/utils';
+import filters from './filters';
+
 const header = document.getElementById('myHeader');
 
 const sticky = header.offsetTop;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 const makeStick = () => {
   if (window.pageYOffset > sticky) {
     header.classList.add('sticky');
@@ -11,7 +13,17 @@ const makeStick = () => {
   }
 };
 
-// When the user scrolls the page, execute makeStick
-window.onscroll = () => { makeStick(); };
+const createTitle = () => {
+  const domString = '<h1>Nashville Black-Owned Restaurants</h1>';
+  utils.printToDom('#title', domString);
+};
 
-export default { makeStick };
+const createHeader = () => {
+  createTitle();
+  // filters.createFilterButtons();
+  makeStick();
+  filters.toggleBtnState();
+  window.onscroll = () => { makeStick(); };
+};
+
+export default { createHeader };
