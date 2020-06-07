@@ -56,6 +56,9 @@ body {
 #results {
   display: grid;
   grid-template-columns: 25vw 25vw 25vw 25vw;
+  position: absolute;
+  left: 200px;
+  z-index: -1;
 }
 
 .name {
@@ -88,6 +91,9 @@ body {
 #filterButtons {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  overflow: auto;
+  width: 200px;
 }
 
 .category-title {
