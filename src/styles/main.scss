@@ -13,18 +13,18 @@ body {
   background-color: blue;
   text-align: center;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: normal;
   padding: 15px;
   margin: 0;
-}
-
-.header, #myHeader {
-  background: #555;
-  color: #f1f1f1;
+  color: white;
 }
 
 #myHeader {
+  text-align: center;
+  background:black;
+  color: lightgrey;
   padding: 10px 16px;
+  text-transform: uppercase;
 }
 
 #results {
@@ -45,7 +45,7 @@ body {
 
 #content {
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 300px auto;
 }
 
 .biz {
@@ -55,9 +55,10 @@ body {
 
 #results {
   display: grid;
-  grid-template-columns: 25vw 25vw 25vw 25vw;
+  // grid-template-columns: 33vw 33vw 34vw;
+  grid-template-columns: calc(33vw - 100px) calc(33vw - 100px) calc(33vw - 100px);
   position: absolute;
-  left: 200px;
+  left: 250px;
   z-index: -1;
 }
 
@@ -93,7 +94,8 @@ body {
   flex-direction: column;
   position: fixed;
   overflow: auto;
-  width: 200px;
+  width: 300px;
+  padding-left: 10px;
 }
 
 .category-title {
