@@ -1,5 +1,5 @@
 import utils from '../helpers/utils';
-import filters from './filters';
+import app from './app';
 
 const header = document.getElementById('myHeader');
 
@@ -20,9 +20,8 @@ const createTitle = () => {
 
 const createHeader = () => {
   createTitle();
-  // filters.createFilterButtons();
   makeStick();
-  filters.toggleBtnState();
+  app.toggleBtnState();
   window.onscroll = () => { makeStick(); };
 };
 
