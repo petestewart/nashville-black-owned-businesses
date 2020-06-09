@@ -42,7 +42,33 @@ const displayResults = (array) => {
       <div class = "address">${business.address}</div>
       <div class = "zip">${business.zip}</div>
       <div class = "neighborhood">${business.neighborhood}</div>
-      <div class = "link"><a href = "${business.url}" target="_blank">link</a></div>
+      <div class = "link">`;
+    if (business.yelp !== '') {
+      domString += `
+      <a href = "${business.yelp}" target="_blank">
+      <img src="src/images/fi_yelp.png" alt="Yelp"></a>
+      `;
+    }
+    if (business.doordash !== '') {
+      domString += `
+      <a href = "${business.doordash}" target="_blank">
+      <img src="src/images/fi_doordash.png" alt="DoorDash"></a>
+      `;
+    }
+    if (business.grubhub !== '') {
+      domString += `
+      <a href = "${business.grubhub}" target="_blank">
+      <img src="src/images/fi_grubhub.png" alt="GrubHub"></a>
+      `;
+    }
+    if (business.ubereats !== '') {
+      domString += `
+      <a href = "${business.ubereats}" target="_blank">
+      <img src="src/images/fi_ubereats.png" alt="UberEats"></a>
+      `;
+    }
+    domString += `
+        </div>
     </div>
     `;
   }

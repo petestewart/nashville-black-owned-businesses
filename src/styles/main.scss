@@ -1,34 +1,52 @@
+@import 'colors';
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@font-face {
+  font-family: 'cornerstoneregular';
+  src: url('./fonts/cornerstone-webfont.woff2') format('woff2'),
+       url('./fonts/cornerstone-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 body {
   font-size: 22px;
   // font-size: 14px;
   line-height: 1.28571em;
   font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #333;
+  color: black;
+  background-color: $med-bkd;
+}
+
+.biz {
+  img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  }
 }
 
 .banner {
-  background-color: blue;
+  // font-family: 'cornerstoneregular';
+  background-color: black;
   text-align: center;
   font-size: 1em;
   font-weight: normal;
   padding: 15px;
   margin: 0;
-  color: white;
+  color: $light-bkd;
 }
 
 #myHeader {
-  text-align: center;
-  background:black;
-  color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'cornerstoneregular';
+  background: url('../images/black-rest-banner.png');
+  min-height: 164px;
+  color: $bright-text;
   padding: 10px 16px;
   text-transform: uppercase;
-}
-
-#results {
-  padding: 16px;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -49,13 +67,18 @@ body {
 }
 
 .biz {
+  border: 1px solid $bright-text;
+  border-radius: 2%;
   margin: 10px;
   padding: 10px;
+  background-color: $pale;
 }
 
 #results {
+  padding: 16px;
+  background-color: $light-bkd;
+  color: black;
   display: grid;
-  // grid-template-columns: 33vw 33vw 34vw;
   grid-template-columns: calc(33vw - 100px) calc(33vw - 100px) calc(33vw - 100px);
   position: absolute;
   left: 250px;
@@ -110,4 +133,10 @@ ul {
 
 .filter-group {
   margin-top: 20px;
+}
+
+#title {
+  h1 {
+    font-size: 3em;
+  }
 }
