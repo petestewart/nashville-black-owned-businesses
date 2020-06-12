@@ -1,7 +1,6 @@
 import utils from '../helpers/utils';
-import app from './app';
 
-const header = document.getElementById('myHeader');
+const header = document.getElementById('header');
 
 const sticky = header.offsetTop;
 
@@ -21,7 +20,7 @@ const createTitle = () => {
 const createHeader = () => {
   createTitle();
   makeStick();
-  app.toggleBtnState();
+  // app.toggleBtnState();
   window.onscroll = () => { makeStick(); };
 };
 

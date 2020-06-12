@@ -3,28 +3,43 @@ import data from '../helpers/data/bizData';
 
 const currentFilters = { neighborhood: [], type: [], veg: false };
 
-const checkSingleFilter = (shop, category) => {
-  if (currentFilters[category].length === 0) {
-    return true;
-  }
-  for (let i = 0; i < currentFilters[category].length; i += 1) {
-    if (shop[category].includes(currentFilters[category][i])) {
-      return true;
-    }
-  } return false;
+const checkSingleFilter = (shop, filter) => {
+  if (currentFilters[filter].length > 0) {
+    return (shop[filter].includes(currentFilters[filter]));
+  } return true;
 };
 
-const checkSingleSwitch = (shop, category) => {
-  if (currentFilters[category] === true) {
-    return (shop[category] === true);
-  }
-  return true;
+const checkSingleSwitch = (shop, condition) => {
+  if (currentFilters[condition] === true) {
+    return (shop[condition] === true);
+  } return true;
 };
-
 const applyCurrentFilters = () => {
   const shops = data.getBusinesses();
   const result = shops.filter((shop) => (checkSingleFilter(shop, 'neighborhood') && checkSingleFilter(shop, 'type') && checkSingleSwitch(shop, 'veg')));
   return result;
+};
+
+const getFilteredResults = () => {
+  let filteredList = [];
+  const list = data.getBusinesses().slice();
+  if (currentFilters.neighborhood.length > 0) {
+    currentFilters.neighborhood.forEach((nFilter) => {
+      const results = list.filter((shop) => shop.neighborhood.includes(nFilter));
+      filteredList = filteredList.concat(results);
+    });
+  }
+  // newcode:
+  if (currentFilters.type.length > 0) {
+    currentFilters.type.forEach((fFilter) => {
+      const results = filteredList.filter((shop) => shop.type.includes(fFilter));
+      // filteredList = filteredList.concat(results);
+      filteredList = results;
+    });
+  }
+
+  // end newcode
+  return filteredList;
 };
 
 const displayResults = (array) => {
@@ -171,11 +186,12 @@ const addClickedFilter = (clickedFilter, clickedId, c) => {
   // if the all button was clicked, empty that portion of currentFilters:
   if (clickedFilter === 'all') {
     currentFilters[category].length = 0;
-    console.error('ALL BUTTON');
     utils.toggleBoxOn(`filter-${c}-all`);
-    // TODO: ADD CHECKBOX RESET FUNCTION
-    // if clicked filter already exists, remove it:
-  } else if (currentFilters[category].includes(clickedFilter)) {
+    // displayAll(); ** TODO: change this to checkbox toggling function
+    // return; ** probably kill this line
+  }
+  // if clicked filter already exists, remove it:
+  if (currentFilters[category].includes(clickedFilter)) {
     const a = currentFilters[category].indexOf(clickedFilter);
     currentFilters[category].splice(a, 1);
     utils.toggleBoxOff(clickedId);
@@ -185,9 +201,15 @@ const addClickedFilter = (clickedFilter, clickedId, c) => {
     utils.toggleBoxOn(clickedId);
     utils.toggleBoxOff(`filter-${c}-all`);
   }
+
   // // if that was the last active filter in cat, toggle all button
   if (currentFilters[category].length === 0) {
     utils.toggleBoxOn(`filter-${c}-all`);
+    displayAll(); // will need to change
+  } else {
+  // run the filters and display results:
+    // const newResults = getFilteredResults(); ** OLD WAY
+    // displayResults(newResults); ** ALOD WAY
   }
   const results = applyCurrentFilters();
   console.error('currentFilters: ', currentFilters);
@@ -218,5 +240,5 @@ const createFilterButtons = () => {
 };
 
 export default {
-  displayResults, createFilterButtons, displayAll,
+  displayResults, getFilteredResults, createFilterButtons, displayAll,
 };
