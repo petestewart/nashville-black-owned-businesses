@@ -8,10 +8,12 @@ Initially this is focused on restaraunts that deliver and/or offer carry-out, bu
 
 ## Backlog
 - [x] Enter businesses info into data array
-- [ ] Create buttons to filter by neighborhood and/or food type
-- [ ] Display links to yelp or other resource for each business
-- [ ] Add direct delivery order links where possible
-- [ ] Add image URL's for each business
+- [x] Create buttons to filter by neighborhood and/or food type
+- [x] Display links to yelp or other resource for each business
+- [x] Add direct delivery order links where possible
+- [ ] Make filter buttons interactively disappear and appear
+- [ ] Add image URL's for each business?
+- [ ] Improve styling
 
 ## Contributors
 * [Pete Stewart](https://github.com/petestewart72)
